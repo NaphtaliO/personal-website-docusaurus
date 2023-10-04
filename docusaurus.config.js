@@ -78,7 +78,7 @@ const config = {
           },
           {to: '/blog', label: 'Blog', position: 'left'},
           {
-            href: 'https://github.com/facebook/docusaurus',
+            href: 'https://github.com/NaphtaliO',
             label: 'GitHub',
             position: 'right',
           },
@@ -87,47 +87,47 @@ const config = {
       footer: {
         style: 'dark',
         links: [
+          // {
+          //   title: 'Docs',
+          //   items: [
+          //     {
+          //       label: 'Tutorial',
+          //       to: '/docs/intro',
+          //     },
+          //   ],
+          // },
           {
-            title: 'Docs',
+            title: 'Socials',
             items: [
               {
-                label: 'Tutorial',
-                to: '/docs/intro',
-              },
-            ],
-          },
-          {
-            title: 'Community',
-            items: [
-              {
-                label: 'Stack Overflow',
-                href: 'https://stackoverflow.com/questions/tagged/docusaurus',
-              },
-              {
-                label: 'Discord',
-                href: 'https://discordapp.com/invite/docusaurus',
+                label: 'LinkedIn',
+                href: 'https://www.linkedin.com/in/naphtali-odinakachi-969b25219/',
               },
               {
                 label: 'Twitter',
                 href: 'https://twitter.com/docusaurus',
               },
+              // {
+              //   label: 'Discord',
+              //   href: 'https://discordapp.com/invite/docusaurus',
+              // },
             ],
           },
           {
-            title: 'More',
+            title: 'Code',
             items: [
+              {
+                label: 'GitHub',
+                href: 'https://github.com/NaphtaliO',
+              },
               {
                 label: 'Blog',
                 to: '/blog',
               },
-              {
-                label: 'GitHub',
-                href: 'https://github.com/facebook/docusaurus',
-              },
             ],
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
+        copyright: `Copyright © ${new Date().getFullYear()} Naphtali Odinakachi. Built with Docusaurus.`,
       },
       prism: {
         theme: lightCodeTheme,
