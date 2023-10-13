@@ -3,11 +3,10 @@
 
 const lightCodeTheme = require('prism-react-renderer/themes/github');
 const darkCodeTheme = require('prism-react-renderer/themes/dracula');
-const TITLE = "Naphtali";
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: TITLE,
+  title: "Naphtali Odinakachi | Software Engineer",
   // tagline: 'Dinosaurs are cool',
   favicon: 'img/favicon.ico',
 
@@ -25,35 +24,40 @@ const config = {
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
 
-  // Even if you don't use internalization, you can use this field to set useful
-  // metadata like html lang. For example, if your site is Chinese, you may want
-  // to replace "en" with "zh-Hans".
   i18n: {
     defaultLocale: 'en',
     locales: ['en'],
   },
+
+  plugins: [
+    "docusaurus-plugin-sass",
+    [
+      "@docusaurus/plugin-ideal-image",
+      {
+        quality: 85,
+        max: 2000,
+        min: 500,
+        steps: 4,
+        disableInDev: false,
+      },
+    ],
+  ],
 
   presets: [
     [
       'classic',
       /** @type {import('@docusaurus/preset-classic').Options} */
       ({
-        docs: {
-          sidebarPath: require.resolve('./sidebars.js'),
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
-        },
+        docs: false,
         blog: {
           showReadingTime: true,
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+            'https://github.com/NaphtaliO/personal-website-docusaurus/tree/main/',
         },
         theme: {
-          customCss: require.resolve('./src/css/custom.css'),
+          customCss: require.resolve('./src/css/custom.scss'),
         },
       }),
     ],
@@ -93,20 +97,20 @@ const config = {
 
         //... other Algolia params
       },
+      colorMode: {
+        respectPrefersColorScheme: true,
+      },
       navbar: {
-        title: TITLE,
-        // logo: {
-        //   alt: 'My Site Logo',
-        //   src: 'img/logo.jpeg',
-        // },
+        title: "Naphtali Odinakachi",
+        logo: {
+          alt: "Naphtali Odinakachi Logo",
+          src: "img/logo.png",
+          // srcDark: "img/logo-white.svg",
+        },
+        hideOnScroll: false,
         items: [
-          {
-            type: 'docSidebar',
-            sidebarId: 'aboutSidebar',
-            position: 'left',
-            label: 'About',
-          },
-          {to: '/blog', label: 'Blog', position: 'left'},
+          { to: '/blog', label: 'Blog', position: 'left' },
+          { to: "/projects", label: "Projects", position: "left" },
           {
             href: 'https://github.com/NaphtaliO',
             label: 'GitHub',
@@ -117,15 +121,6 @@ const config = {
       footer: {
         style: 'dark',
         links: [
-          // {
-          //   title: 'Docs',
-          //   items: [
-          //     {
-          //       label: 'Tutorial',
-          //       to: '/docs/intro',
-          //     },
-          //   ],
-          // },
           {
             title: 'Socials',
             items: [
@@ -135,12 +130,8 @@ const config = {
               },
               {
                 label: 'Twitter',
-                href: 'https://twitter.com/docusaurus',
+                href: 'https://twitter.com/naphtali_O1',
               },
-              // {
-              //   label: 'Discord',
-              //   href: 'https://discordapp.com/invite/docusaurus',
-              // },
             ],
           },
           {
